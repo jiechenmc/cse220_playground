@@ -1,11 +1,11 @@
 .data
   arr: .word 1, 2, 3123
-  oddPrompt: .asciiz "The number is odd!"
-  evenPrompt: .asciiz "The number is even!"
+  prompt1: .asciiz "The first number: "
+  prompt2: .asciiz "The second number: "
 .text
 main:
 	
-	# print First Number:
+	# print the first prompt
 	la $a0 prompt1
 	li $v0 4
 	syscall 
@@ -17,7 +17,7 @@ main:
 	# $v0 holds first number
 	move $s0 $v0 # $s0 holds first number
 	
-	# prtint Second Number:
+	# prtint the second prompt
 	la $a0 prompt2
 	li $v0 4
 	syscall
